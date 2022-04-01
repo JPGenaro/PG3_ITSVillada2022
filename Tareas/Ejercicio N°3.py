@@ -1,8 +1,8 @@
 def ejercicio_3():
     print("==Ejercicio N°3==")
-    width = int(input("Indique el ancho: "))
-    height = int(input("Indique el lato: "))
-    caracter = input("Escriba el caracter: ")
+    width: int = int(input("Indique el ancho: "))
+    height: int = int(input("Indique el lato: "))
+    caracter: str = input("Escriba el caracter: ")
 
     for i in range(width):
         for j in range(height):
