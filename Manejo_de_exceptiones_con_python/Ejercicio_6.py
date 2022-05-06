@@ -21,7 +21,7 @@ except pymysql.err.NotSupportedError as e:
     print(e, "\nError no soportado...")
 except pymysql.err.DatabaseError as e:
     print(e, "\nError de base de datos...")
-except:
-    print("Error desconocido...")
+except Exception as e:
+    print(e, "\nError desconocido...")
 
 conexion.close()
