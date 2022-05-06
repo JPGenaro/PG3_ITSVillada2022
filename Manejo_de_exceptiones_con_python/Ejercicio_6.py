@@ -7,20 +7,20 @@ try:
     cur.execute( "se lect nombre, apellido FROM usuarios" )
     for nombre, apellido in cur.fetchall() :
         print (nombre, apellido)
-except pymysql.err.ProgrammingError:
-    print("Error de programación...")
-except pymysql.err.InternalError:
-    print("Error interno...")
-except pymysql.err.OperationalError:
-    print("Error de operación...")
-except pymysql.err.IntegrityError:
-    print("Error de integridad...")
-except pymysql.err.DataError:
-    print("Error de datos...")
-except pymysql.err.NotSupportedError:
-    print("Error no soportado...")
-except pymysql.err.DatabaseError:
-    print("Error de base de datos...")
+except pymysql.err.ProgrammingError as e:
+    print(e, "\nError de programación...")
+except pymysql.err.InternalError as e:
+    print(e, "\nError interno...")
+except pymysql.err.OperationalError as e:
+    print(e, "\nError de operación...")
+except pymysql.err.IntegrityError as e:
+    print(e, "\nError de integridad...")
+except pymysql.err.DataError as e:
+    print(e, "\nError de datos...")
+except pymysql.err.NotSupportedError as e:
+    print(e, "\nError no soportado...")
+except pymysql.err.DatabaseError as e:
+    print(e, "\nError de base de datos...")
 except:
     print("Error desconocido...")
 
