@@ -9,7 +9,6 @@ try:
         print (nombre, apellido)
 except pymysql.err.ProgrammingError:
     print("Error de programación...")
-    conexion.close()
 except pymysql.err.InternalError:
     print("Error interno...")
 except pymysql.err.OperationalError:
@@ -23,4 +22,6 @@ except pymysql.err.NotSupportedError:
 except pymysql.err.DatabaseError:
     print("Error de base de datos...")
 except:
-    print("Error de conexión...")
+    print("Error desconocido...")
+
+conexion.close()
